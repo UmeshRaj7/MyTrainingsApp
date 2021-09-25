@@ -22,7 +22,7 @@ class ScrollButton extends StatefulWidget {
 class _ScrollButtonState extends State<ScrollButton> {
   bool hideLeft = true;
   bool hideRight = false;
-  final ScrollController _controller = ScrollController();
+  final PageController _controller = PageController();
 
   @override
   void initState() {

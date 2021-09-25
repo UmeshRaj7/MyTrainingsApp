@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_trainings_app/models/training_model.dart';
 import 'package:my_trainings_app/utils/constants.dart';
@@ -13,11 +14,13 @@ class CarousalCard extends StatelessWidget {
       child: Stack(
         children: [
           Container(
+            width: MediaQuery.of(context).size.width,
             color: Colors.black,
             child: Opacity(
               opacity: 0.5,
               child: Image.asset(
                 trainingModel?.image ?? trainingImage,
+                fit: BoxFit.cover,
               ),
             ),
           ),

@@ -76,12 +76,16 @@ class TrainingListCard extends StatelessWidget {
                       height: 50,
                       child: Stack(
                         children: [
-                          CircleAvatar(),
+                          CircleAvatar(
+                            backgroundImage:
+                                AssetImage(trainingModel!.trainer_image),
+                          ),
                           Align(
                             alignment: Alignment.centerRight,
                             child: Icon(
-                              Icons.email,
+                              Icons.verified,
                               size: 20,
+                              color: Colors.blue,
                             ),
                           )
                         ],

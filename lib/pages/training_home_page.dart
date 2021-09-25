@@ -5,7 +5,9 @@ import 'package:flutter_mobile_carousel/carousel_arrow.dart';
 import 'package:my_trainings_app/models/training_model.dart';
 import 'package:my_trainings_app/utils/constants.dart';
 import 'package:my_trainings_app/widgets/carousal_card.dart';
+import 'package:my_trainings_app/widgets/filter_widget.dart';
 import 'package:my_trainings_app/widgets/scroll_widget.dart';
+import 'package:my_trainings_app/widgets/training_details.dart';
 import 'package:my_trainings_app/widgets/training_list_card.dart';
 
 class TrainingHomePage extends StatefulWidget {
@@ -47,7 +49,14 @@ class _TrainingHomePageState extends State<TrainingHomePage> {
         ),
       ),
       endDrawer: Center(
-        child: Text('Work in Progress Come back Later'),
+        child: Text(
+          'Work in Progress Come back Later',
+          style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 18,
+              fontFamily: 'Europa'),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -81,17 +90,23 @@ class _TrainingHomePageState extends State<TrainingHomePage> {
                     width: MediaQuery.of(context).size.width,
                     child: ScrollButton(
                       itemsLength: trainingModelList.length,
-                      padding: EdgeInsets.symmetric(horizontal: 20),
                       topPositionPercent: 0.3,
-                      builder: (context, controller) => ListView.builder(
+                      builder: (context, controller) => PageView.builder(
                         // physics: NeverScrollableScrollPhysics(),
                         controller: controller,
-                        shrinkWrap: true,
                         itemCount: trainingModelList.length,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          return CarousalCard(
-                            trainingModel: trainingModelList[index],
+                          return InkWell(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => TrainingDetails(
+                                        trainingModel:
+                                            trainingModelList[index]))),
+                            child: CarousalCard(
+                              trainingModel: trainingModelList[index],
+                            ),
                           );
                         },
                       ),
@@ -100,28 +115,44 @@ class _TrainingHomePageState extends State<TrainingHomePage> {
                   SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    height: 35,
-                    width: 60,
-                    margin: EdgeInsets.only(left: 15),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                        border: Border.all(
-                          color: HexColor('#b2b2b2'),
-                        )),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Icon(
-                          Icons.filter_list_sharp,
-                          size: 20,
-                          color: HexColor('#b2b2b2'),
-                        ),
-                        Text(
-                          'Filter',
-                          style: TextStyle(color: HexColor('#b2b2b2')),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: () {
+                      showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+                          builder: (bottomSheetContext) => Container(
+                                // padding: EdgeInsets.only(
+                                //     bottom: MediaQuery.of(context)
+                                //         .viewInsets
+                                //         .bottom),
+                                child: FilterWidget(
+                                  trainingModelList: trainingModelList,
+                                ),
+                              ));
+                    },
+                    child: Container(
+                      height: 35,
+                      width: 60,
+                      margin: EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                          border: Border.all(
+                            color: HexColor('#b2b2b2'),
+                          )),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.filter_list_sharp,
+                            size: 20,
+                            color: HexColor('#b2b2b2'),
+                          ),
+                          Text(
+                            'Filter',
+                            style: TextStyle(color: HexColor('#b2b2b2')),
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -137,8 +168,15 @@ class _TrainingHomePageState extends State<TrainingHomePage> {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 8),
-                      child: TrainingListCard(
-                        trainingModel: trainingModelList[index],
+                      child: InkWell(
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TrainingDetails(
+                                    trainingModel: trainingModelList[index]))),
+                        child: TrainingListCard(
+                          trainingModel: trainingModelList[index],
+                        ),
                       ),
                     );
                   }),

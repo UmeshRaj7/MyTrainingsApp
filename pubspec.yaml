@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_mobile_carousel: ^1.0.3
+
 
 
 
@@ -35,7 +35,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 dependency_overrides:
-  flutter_mobile_carousel: ^1.0.3
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -50,6 +50,11 @@ flutter:
 
   assets:
   - assets/training_image.jpg
+  - assets/john.jpg
+  - assets/chriss.jpg
+  - assets/mark.jpeg
+  - assets/raj.png
+  - assets/tony.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
