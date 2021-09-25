@@ -1,4 +1,4 @@
-# my_trainings_app
+# My Trainings App
 
 My Trainings App
 
