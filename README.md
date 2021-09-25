@@ -12,4 +12,7 @@ Description and options:
 5. Click on the card to see the details
 
 
-ScreeShots
+## ScreeShots
+https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Home.jpg
+https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Filter.jpg
+https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Details.jpg
