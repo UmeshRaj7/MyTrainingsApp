@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_carousel/carousel.dart';
-import 'package:flutter_mobile_carousel/carousel_arrow.dart';
 import 'package:my_trainings_app/models/training_model.dart';
 import 'package:my_trainings_app/utils/constants.dart';
 import 'package:my_trainings_app/widgets/carousal_card.dart';
