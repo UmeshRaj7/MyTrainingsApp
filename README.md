@@ -4,13 +4,9 @@ My Trainings App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Description and options:
+1. The app will display data of different training sessions schedules across country with speakers and date details
+2.It have caraousal with manual sliding options
+3.Click on filter option to see filtered data based on Location, Training Name and Trainer name
+4. You can search and select the options which automatically apply to the list
+5. Click on the card to see the details
