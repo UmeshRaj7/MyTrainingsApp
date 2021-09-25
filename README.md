@@ -14,5 +14,7 @@ Description and options:
 
 ## ScreeShots
 https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Home.jpg
+
 https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Filter.jpg
+
 https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Details.jpg
