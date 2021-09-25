@@ -11,6 +11,7 @@ class CarousalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
       child: Stack(
         children: [
           Container(
@@ -24,9 +25,10 @@ class CarousalCard extends StatelessWidget {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.centerLeft,
+          Positioned(
+            bottom: 20,
             child: Container(
+              width: MediaQuery.of(context).size.width * 0.80,
               margin: EdgeInsets.only(left: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +50,6 @@ class CarousalCard extends StatelessWidget {
                     height: 10,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       RichText(
                         textAlign: TextAlign.left,
@@ -65,7 +66,7 @@ class CarousalCard extends StatelessWidget {
                               ),
                             ),
                             TextSpan(
-                              text: '\$825',
+                              text: trainingModel!.amount.toString(),
                               style: TextStyle(
                                   fontSize: 16,
                                   color: themeColor,
@@ -74,7 +75,7 @@ class CarousalCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(),
+                      Spacer(),
                       Row(
                         children: [
                           Text(

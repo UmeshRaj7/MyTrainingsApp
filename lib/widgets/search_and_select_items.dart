@@ -5,12 +5,10 @@ import 'package:my_trainings_app/models/training_model.dart';
 import 'package:my_trainings_app/utils/constants.dart';
 
 class SearchAndSelectItems extends StatefulWidget {
-  final List<TrainingModel> trainingModelList;
-  final Function(List<TrainingModel> trainingModelList) updatedItems;
+  final Function(List<Filter> filtersList) updatedItems;
   final FilterOptions selectedOption;
 
   SearchAndSelectItems({
-    required this.trainingModelList,
     required this.updatedItems,
     required this.selectedOption,
   });
@@ -23,8 +21,8 @@ class _SearchAndSelectItemsState extends State<SearchAndSelectItems> {
   bool isExpanded = false;
   bool _isSearching = false;
   String selectedCategory = '';
-  List<String> selectedSubCategories = [];
-  List<String> selectedSubCategoriesIds = [];
+  List<Filter> selectedSubCategories = [];
+  List<String> selectedListName = [];
   List<TrainingModel> categories = [];
   List<TrainingModel> searchcategories = [];
   TextEditingController _textEditingController = TextEditingController();
@@ -37,7 +35,10 @@ class _SearchAndSelectItemsState extends State<SearchAndSelectItems> {
   }
 
   Future<void> getCategories() async {
-    categories = widget.trainingModelList;
+    getTrainingData.forEach((element) {
+      categories.add(TrainingModel.fromMap(element));
+    });
+
     dataLoaded = true;
     setState(() {});
   }
@@ -55,6 +56,13 @@ class _SearchAndSelectItemsState extends State<SearchAndSelectItems> {
           element.trainerName.toLowerCase().contains(query.toLowerCase())));
     }
     setState(() {});
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _textEditingController.dispose();
+    super.dispose();
   }
 
   @override
@@ -126,15 +134,33 @@ class _SearchAndSelectItemsState extends State<SearchAndSelectItems> {
             padding: const EdgeInsets.only(left: 10.0),
             child: CheckboxListTile(
               title: Text(subs[index], style: TextStyle(color: Colors.black)),
-              value: selectedSubCategories.contains(subs[index]),
+              value: selectedListName.contains(subs[index]),
               onChanged: (value) {
                 if (value == true) {
-                  selectedSubCategoriesIds.add(subs[index]);
-                  selectedSubCategories.add(subs[index]);
-                } else {
-                  selectedSubCategoriesIds.remove(subs[index]);
+                  if (widget.selectedOption == FilterOptions.LOCATION) {
+                    selectedSubCategories.add(LocationFilter(subs[index]));
+                  } else if (widget.selectedOption ==
+                      FilterOptions.TRAINING_NAME) {
+                    selectedSubCategories.add(TrainingNameFilter(subs[index]));
+                  } else {
+                    selectedSubCategories.add(TrainerFilter(subs[index]));
+                  }
+                  selectedListName.add(subs[index]);
 
-                  selectedSubCategories.remove(subs[index]);
+                  widget.updatedItems(selectedSubCategories);
+                } else {
+                  if (widget.selectedOption == FilterOptions.LOCATION) {
+                    selectedSubCategories.remove(LocationFilter(subs[index]));
+                  } else if (widget.selectedOption ==
+                      FilterOptions.TRAINING_NAME) {
+                    selectedSubCategories
+                        .remove(TrainingNameFilter(subs[index]));
+                  } else {
+                    selectedSubCategories.remove(TrainerFilter(subs[index]));
+                  }
+                  selectedListName.remove(subs[index]);
+
+                  widget.updatedItems(selectedSubCategories);
                 }
                 setState(() {});
               },

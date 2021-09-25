@@ -4,9 +4,11 @@ import 'package:my_trainings_app/utils/constants.dart';
 import 'package:my_trainings_app/widgets/search_and_select_items.dart';
 
 class FilterWidget extends StatefulWidget {
-  final List<TrainingModel> trainingModelList;
+  final Function(List<Filter> filtersList) updatedItems;
 
-  FilterWidget({required this.trainingModelList});
+  FilterWidget({
+    required this.updatedItems,
+  });
 
   @override
   _FilterWidgetState createState() => _FilterWidgetState();
@@ -96,8 +98,9 @@ class _FilterWidgetState extends State<FilterWidget> {
             width: MediaQuery.of(context).size.width * 0.50,
             height: MediaQuery.of(context).size.height,
             child: SearchAndSelectItems(
-              updatedItems: (List<TrainingModel> trainingModelList) {},
-              trainingModelList: widget.trainingModelList,
+              updatedItems: (List<Filter> filtersList) {
+                widget.updatedItems(filtersList);
+              },
               selectedOption: selectedOption,
             ),
           )

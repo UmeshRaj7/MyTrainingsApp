@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_trainings_app/models/training_model.dart';
 
 Color get themeColor => HexColor('#ff4855');
 String get trainingImage => 'assets/training_image.jpg';
@@ -28,7 +29,7 @@ List<dynamic> getTrainingData = [
     'trainer_image': rajImage,
     'training_name': 'Safe Scrum Master',
     'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -37,42 +38,42 @@ List<dynamic> getTrainingData = [
     'id': '2',
     'trainer_name': 'Raj',
     'trainer_image': rajImage,
-    'training_name': 'Safe Scrum Master',
+    'training_name': 'Python Master',
     'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 700
   },
   {
     'image': trainingImage,
     'id': '3',
     'trainer_name': 'Tony',
     'trainer_image': tonyImage,
-    'training_name': 'Safe Scrum Master',
+    'training_name': 'AI Master',
     'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 750
   },
   {
     'image': trainingImage,
     'id': '4',
     'trainer_name': 'Mark',
     'trainer_image': markImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'Full Stack Developer',
+    'location': 'Delhi',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 900
   },
   {
     'image': trainingImage,
     'id': '5',
     'trainer_name': 'Tony',
     'trainer_image': tonyImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'AI Master',
+    'location': 'Delhi',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -82,8 +83,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'John',
     'trainer_image': johnImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'Delhi',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -92,11 +93,11 @@ List<dynamic> getTrainingData = [
     'id': '7',
     'trainer_name': 'Raj',
     'trainer_image': rajImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'Python Master',
+    'location': 'Delhi',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 700
   },
   {
     'image': trainingImage,
@@ -104,8 +105,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'Chris',
     'trainer_image': chrissImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'Silicon Vally',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -115,8 +116,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'Chris',
     'trainer_image': chrissImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'Silicon Vally',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -126,8 +127,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'Chris',
     'trainer_image': chrissImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'Silicon Vally',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -137,8 +138,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'John',
     'trainer_image': johnImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'Silicon Vally',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -147,11 +148,11 @@ List<dynamic> getTrainingData = [
     'id': '12',
     'trainer_name': 'Raj',
     'trainer_image': rajImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'Python Master',
+    'location': 'Chicago, IL',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 700
   },
   {
     'image': trainingImage,
@@ -159,8 +160,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'Raj',
     'trainer_image': rajImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'Chicago, IL',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -169,44 +170,44 @@ List<dynamic> getTrainingData = [
     'id': '14',
     'trainer_name': 'Raj',
     'trainer_image': rajImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'Python Master',
+    'location': 'Chicago, IL',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 700
   },
   {
     'image': trainingImage,
     'id': '15',
     'trainer_name': 'Tony',
     'trainer_image': tonyImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'AI Master',
+    'location': 'New york',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 750
   },
   {
     'image': trainingImage,
     'id': '16',
     'trainer_name': 'Tony',
     'trainer_image': tonyImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'AI Master',
+    'location': 'New york',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 750
   },
   {
     'image': trainingImage,
     'id': '17',
     'trainer_name': 'Mark',
     'trainer_image': markImage,
-    'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'training_name': 'Full Stack Developer',
+    'location': 'New york',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
-    'amount': 825
+    'amount': 900
   },
   {
     'image': trainingImage,
@@ -214,8 +215,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'John',
     'trainer_image': johnImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'New york',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -225,8 +226,8 @@ List<dynamic> getTrainingData = [
     'trainer_name': 'John',
     'trainer_image': johnImage,
     'training_name': 'Safe Scrum Master',
-    'location': 'West Des Moines',
-    'date': 'Oct 11 -13,2019',
+    'location': 'Silicon Vally',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 825
   },
@@ -237,7 +238,7 @@ List<dynamic> getTrainingData = [
     'trainer_image': markImage,
     'training_name': 'Full Stack Developer',
     'location': 'Chicago, IL',
-    'date': 'Oct 11 -13,2019',
+    'date': 'Oct 11-13,\n2019',
     'time': '8:30am - 12:30pm',
     'amount': 900
   },
@@ -293,5 +294,42 @@ class LoadingIndicator extends StatelessWidget {
             AlwaysStoppedAnimation<Color>(Theme.of(context).primaryColor),
       ),
     );
+  }
+}
+
+abstract class Filter {
+  final String data;
+  bool checkFilter(TrainingModel model);
+
+  Filter(this.data);
+}
+
+class LocationFilter extends Filter {
+  LocationFilter(String data) : super(data);
+
+  @override
+  bool checkFilter(TrainingModel model) {
+    // TODO: implement checkFilter
+    return model.location == data;
+  }
+}
+
+class TrainingNameFilter extends Filter {
+  TrainingNameFilter(String data) : super(data);
+
+  @override
+  bool checkFilter(TrainingModel model) {
+    // TODO: implement checkFilter
+    return model.trainingName == data;
+  }
+}
+
+class TrainerFilter extends Filter {
+  TrainerFilter(String data) : super(data);
+
+  @override
+  bool checkFilter(TrainingModel model) {
+    // TODO: implement checkFilter
+    return model.trainerName == data;
   }
 }

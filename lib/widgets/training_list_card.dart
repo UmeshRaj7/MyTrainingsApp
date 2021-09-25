@@ -5,8 +5,9 @@ import 'package:my_trainings_app/utils/constants.dart';
 
 class TrainingListCard extends StatelessWidget {
   final TrainingModel? trainingModel;
+  final VoidCallback onTap;
 
-  TrainingListCard({this.trainingModel});
+  TrainingListCard({this.trainingModel, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class TrainingListCard extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width * 0.35,
-              margin: EdgeInsets.only(left: 8, top: 8, bottom: 8),
+              margin: EdgeInsets.only(left: 6, top: 8, bottom: 8),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,7 +109,7 @@ class TrainingListCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         ElevatedButton(
-                            onPressed: () {},
+                            onPressed: onTap,
                             style: ElevatedButton.styleFrom(
                                 primary: themeColor, onPrimary: Colors.white),
                             child: Text('Enrol Now'))
