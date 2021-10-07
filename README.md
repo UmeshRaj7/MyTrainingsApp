@@ -20,8 +20,7 @@ Description and options:
     <img src="https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Filter.jpg" alt="Demonstartion image."/>
 </p>
 <p align="center">
-    <img src="https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Details.jpg
-" alt="Demonstartion image."/>
+    <img src="https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Details.jpg" alt="Demonstartion image."/>
 </p>
 
 
