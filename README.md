@@ -13,8 +13,17 @@ Description and options:
 
 
 ## ScreeShots
-https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Home.jpg
+<p align="center">
+    <img src="https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Home.jpg" alt="Demonstartion image."/>
+</p>
+<p align="center">
+    <img src="https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Filter.jpg" alt="Demonstartion image."/>
+</p>
+<p align="center">
+    <img src="https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Details.jpg
+" alt="Demonstartion image."/>
+</p>
 
-https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Filter.jpg
 
-https://github.com/UmeshRaj7/MyTrainingsApp/blob/master/Details.jpg
+
+
